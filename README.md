@@ -1,5 +1,5 @@
 ____________________________` AI Gesture Controller (Precision Edition) `________________________________________________ 
-This document outlines the setup and operation of your gesture-based control system. We have transitioned from simple tracking to a State-Based AI Architecture to ensure every movement is intentional and precise.
+This document outlines the setup and operation of my gesture-based control system. We have transitioned from simple tracking to a State-Based AI Architecture to ensure every movement is intentional and precise.
 
 __________________________________________` 🛠 Project Evolution & Logic `________________________________________________
 To achieve professional-grade precision, we implemented several advanced logic layers:
