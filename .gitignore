@@ -2,3 +2,20 @@ venv/
 __pycache__/
 *.pyc
 .vscode/
+hand_landmarker.task# Environments
+venv/
+env/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# MediaPipe Task files (just in case they come back)
+*.task
+
+# IDEs
+.vscode/
+.idea/
