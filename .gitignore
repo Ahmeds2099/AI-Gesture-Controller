@@ -5,9 +5,9 @@ __pycache__/
 hand_landmarker.task# Environments
 venv/
 env/
-.env
-*start_ai_mouse.bat
-*TO DO.txt
+*.env
+start_ai_mouse.bat
+TO DO.txt
 *.Backup.md
 
 # Python cache
