@@ -1,4 +1,5 @@
 @echo off
+
 title AI Gesture Controller
 
 :: Change directory and drive at the same time
@@ -8,9 +9,9 @@ cd /d "G:\Coding\Projects\Final_AI_Controller"
 if exist "venv\Scripts\activate.bat" (
     echo [SUCCESS] Environment Found. Initializing AI...
     
-    :: Activate and run
+    :: Activate and run using virtual environment Python
     call venv\Scripts\activate.bat
-    python run_app.py
+    venv\Scripts\python.exe run_app.py
 ) else (
     echo [ERROR] Virtual Environment not found at:
     echo %CD%\venv

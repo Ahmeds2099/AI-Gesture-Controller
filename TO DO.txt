@@ -1,0 +1,3 @@
+Reduce thumb stretch for click
+thumb and other fingers being counted as gestures at different angles
+more refined improved gestures
