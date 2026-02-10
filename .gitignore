@@ -1,4 +1,4 @@
-venv/
+.venv/
 __pycache__/
 *.pyc
 .vscode/
@@ -6,6 +6,9 @@ hand_landmarker.task# Environments
 venv/
 env/
 .env
+start_ai_mouse.bat
+TO DO.txt
+Backup.md
 
 # Python cache
 __pycache__/

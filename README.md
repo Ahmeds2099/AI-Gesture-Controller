@@ -1,7 +1,7 @@
 ____________________________` AI Gesture Controller (Precision Edition) `________________________________________________ 
 This document outlines the setup and operation of my gesture-based control system. We have transitioned from simple tracking to a State-Based AI Architecture to ensure every movement is intentional and precise.
 
-__________________________________________` 🛠 Project Evolution & Logic `________________________________________________
+__________________________________________`  Project Evolution & Logic `________________________________________________
 To achieve professional-grade precision, we implemented several advanced logic layers:
 
 [!TIP] `Mode State Machine:` The system operates in distinct states (Navigation, Scroll, Volume, Grab). This prevents overlapping commands—ensuring, for example, that you don't accidentally scroll while trying to move the mouse.
@@ -12,7 +12,7 @@ To achieve professional-grade precision, we implemented several advanced logic l
 
 [!NOTE] `Pulse-Trigger Grab:` Distinguishes "Pinching" from "Grabbing" via timing. A Grab only activates if the hand goes from Fully Open to a Fist in under 0.4 seconds.
 
-_______________________________________________`⚙️ Setup Instructions`____________________________________________________
+_______________________________________________` Setup Instructions`____________________________________________________
 >1.Requirements
 Python 3.8+
 Standard USB or Integrated Webcam
@@ -29,7 +29,7 @@ Navigate to your script folder and execute:
 Bash
 `python run_app.py`
 
-______________________________________________`🖐️ Gesture Instruction Manual`____________________________________________
+______________________________________________` Gesture Instruction Manual`____________________________________________
 `1. Standard Mouse Mode (Default)`
 Move Cursor: Point with your Index Finger. The cursor maps 1:1 to your camera view.
 Freeze Cursor (The Brake): Stretch your Thumb out (L-shape).
@@ -56,5 +56,27 @@ Volume Mode: Hold 3 fingers up. Tilt hand Up/Down to adjust volume.
 `4. Global Reset`
 Open Palm: Spread all 4 fingers wide at any time. This acts as an "Emergency Stop" to clear any mode and return to Standard Navigation.
 
-________________________________________________`💻 Terminal Feedback`____________________________________________________
+________________________________________________` Terminal Feedback`____________________________________________________
 Upon launching, the terminal will display a Quick-Reference Guide so you can operate the system without keeping this document open.
+
+______________________________________________ <Version 2.0 (The Tasks Migration)>__________________________________________ As of February 2026, the project has undergone a major engine overhaul to support Python 3.14+ and the latest MediaPipe architecture.
+
+[!TIP] MediaPipe Tasks Integration: We migrated from the legacy mp.solutions to the high-performance MediaPipe Tasks API. This ensures long-term stability and significantly lower CPU overhead during hand tracking.
+
+[!IMPORTANT] Manual Landmark Mapping: Because the new API is leaner, we developed a custom draw_landmarks_manual function. This provides a cleaner visual skeleton without requiring the bloated legacy drawing utilities.
+
+[!WARNING] Local Asset Dependency: Version 2.0 now requires the hand_landmarker.task model file to be present in the root directory. This allows the AI to run offline with zero latency.
+
+Summary of Changes:
+
+Engine: Legacy Mediapipe ➔ MediaPipe Tasks Vision API.
+
+Startup: Suppressed TensorFlow "XNNPACK" info logs for a cleaner terminal.
+
+Compatibility: Fully patched for Python 3.14+ AttributeError and NumPy 2.x float issues.
+
+UI: Preserved the classic "Precision Edition" overlay with zero logic drift.
+
+ Updated Dependency Install__ If upgrading from V1, you must update your environment:
+
+Bash pip install mediapipe opencv-python pyautogui numpy --upgrade # Ensure hand_landmarker.task is in your project folder!
